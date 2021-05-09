@@ -1,4 +1,4 @@
 import { createStore } from "redux";
-import Counter from "../Components/Counter";
+import { counterReducer } from "./reducer";
 
-export const store = createStore(Counter);
+export const store = createStore(counterReducer);

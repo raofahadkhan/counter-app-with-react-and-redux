@@ -1,11 +1,14 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Counter = () => {
 	const dispatch = useDispatch();
+	const count = useSelector((state) => {
+		return state.counter;
+	});
 	return (
 		<div>
-			<div>Counter: 12</div>
+			<div>Count: {count}</div>
 			<div>
 				<button
 					onClick={() => {
